@@ -7,27 +7,53 @@ function share() {
 
 // 切换全屏状态的函数
 function toggleFullScreen() {
-    if (!document.fullscreenElement) {
-        document.documentElement.requestFullscreen();
-        localStorage.setItem('isFullScreen', 'true');
+    // 判断当前是否全屏
+    if (!document.fullscreenElement &&    // 标准模式
+        !document.mozFullScreenElement && !document.webkitFullscreenElement && !document.msFullscreenElement) {  // 兼容Firefox, Chrome/Opera和IE
+        if (document.documentElement.requestFullscreen) {
+            document.documentElement.requestFullscreen(); // 标准方法
+        } else if (document.documentElement.msRequestFullscreen) {
+            document.documentElement.msRequestFullscreen(); // IE11
+        } else if (document.documentElement.webkitRequestFullscreen) {
+            document.documentElement.webkitRequestFullscreen(); // Chrome, Safari (webkit)
+        } else if (document.documentElement.mozRequestFullScreen) {
+            document.documentElement.mozRequestFullScreen(); // Firefox
+        }
     } else {
         if (document.exitFullscreen) {
-            document.exitFullscreen();
+            document.exitFullscreen(); // 标准方法
+        } else if (document.msExitFullscreen) {
+            document.msExitFullscreen(); // IE11
+        } else if (document.webkitExitFullscreen) {
+            document.webkitExitFullscreen(); // Chrome, Safari (webkit)
+        } else if (document.mozCancelFullScreen) {
+            document.mozCancelFullScreen(); // Firefox
         }
-        localStorage.setItem('isFullScreen', 'false');
+    }
+
+    // 切换按钮的显示状态
+    updateButton();
+}
+
+// 更新按钮显示的函数
+function updateButton() {
+    var fsButton = document.getElementById('toggleFullScreen');
+    if (document.fullscreenElement || document.mozFullScreenElement || document.webkitFullscreenElement || document.msFullscreenElement) {
+        // 如果现在是全屏状态，更新为“退出全屏”的图标和提示
+        fsButton.innerHTML = '<i class="fas fa-compress" title="退出全屏"></i>';
+    } else {
+        // 如果现在是非全屏状态，更新为“全屏”的图标和提示
+        fsButton.innerHTML = '<i class="fas fa-expand" title="全屏"></i>';
     }
 }
 
-// 尝试根据本地存储的状态进入全屏
-function attemptFullScreen() {
-    if (localStorage.getItem('isFullScreen') === 'true') {
-        document.documentElement.requestFullscreen().catch(e => {
-            console.log(e);
-            localStorage.setItem('isFullScreen', 'false'); // 无法进入全屏时重置状态
-        });
-    }
-}
+// 为全屏变化事件添加监听器
+document.addEventListener('fullscreenchange', updateButton);
+document.addEventListener('mozfullscreenchange', updateButton);
+document.addEventListener('webkitfullscreenchange', updateButton);
+document.addEventListener('MSFullscreenChange', updateButton);
 
-// 在页面加载完成后尝试进入全屏
-document.addEventListener('DOMContentLoaded', attemptFullScreen);
+// 页面加载完成后，初始化按钮状态
+document.addEventListener('DOMContentLoaded', updateButton);
+
 
