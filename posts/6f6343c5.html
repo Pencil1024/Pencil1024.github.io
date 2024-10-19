@@ -1,0 +1,358 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Linux操作系统 | Pencil</title><meta name="author" content="Pencil"><meta name="copyright" content="Pencil"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="第一章VMware是一个提供虚拟化环境的软件,可以将Ubuntu Linux安装在里面 Ubuntu系统中找不到ifconfig命令：Ubuntu系统中找不到ifconfig命令_找不到命令 “ifconfig”,但可以通过以下软件包安装它: sudo apt install n-CSDN博客 输入ifconfig查看ip地址 快照功能 第二章知识点概括Linux没有盘符这个概念,只有一个根目录&amp;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Linux操作系统">
+<meta property="og:url" content="http://localhost:4000/posts/6f6343c5.html">
+<meta property="og:site_name" content="Pencil">
+<meta property="og:description" content="第一章VMware是一个提供虚拟化环境的软件,可以将Ubuntu Linux安装在里面 Ubuntu系统中找不到ifconfig命令：Ubuntu系统中找不到ifconfig命令_找不到命令 “ifconfig”,但可以通过以下软件包安装它: sudo apt install n-CSDN博客 输入ifconfig查看ip地址 快照功能 第二章知识点概括Linux没有盘符这个概念,只有一个根目录&amp;">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://localhost:4000/img/up.jpg">
+<meta property="article:published_time" content="2024-10-18T11:52:12.000Z">
+<meta property="article:modified_time" content="2024-10-19T05:02:45.638Z">
+<meta property="article:author" content="Pencil">
+<meta property="article:tag" content="Linux">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://localhost:4000/img/up.jpg"><link rel="shortcut icon" href="https://pencil1024.oss-cn-chengdu.aliyuncs.com/imgs/202410191202964.png"><link rel="canonical" href="http://localhost:4000/posts/6f6343c5.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=4.12.0"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.32/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"top_n_per_article":1,"unescape":false,"languages":{"hits_empty":"找不到您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.11.0/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: true,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Linux操作系统',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2024-10-19 13:02:45'
+}</script><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+        if (t === 'dark') activateDarkMode()
+        else if (t === 'light') activateLightMode()
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><link rel="stylesheet" href="/css/huanimg.css?1"><link rel="stylesheet" href="/css/navigatorbar.css?1"><link rel="stylesheet" href="/css/music.css?1"><meta name="generator" content="Hexo 7.0.0"></head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/up.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">18</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">11</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">11</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-desktop"></i><span> 文章</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/categories/"><i class="fa-fw fa fa-archive"></i><span> 分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/archives/"><i class="fa-fw fa fa-folder-open"></i><span> 归档</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-paw"></i><span> 空间</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/life/"><i class="fa-fw fa fa-bicycle"></i><span> 说说</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-splotch"></i><span> 生活</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fa fa-music"></i><span> 音乐</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于我</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><span id="blog-info"><a href="/" title="Pencil"><span class="site-name">Pencil</span></a></span><div id="menus"><div style="display: inline-block;"><a class="site-page social-icon search" href="javascript:;" onclick="toggleWinbox()" title="切换背景-换一种感觉。"><i class="fas fa-image fa-fw"></i></a></div><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-desktop"></i><span> 文章</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/categories/"><i class="fa-fw fa fa-archive"></i><span> 分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/archives/"><i class="fa-fw fa fa-folder-open"></i><span> 归档</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-paw"></i><span> 空间</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/life/"><i class="fa-fw fa fa-bicycle"></i><span> 说说</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-splotch"></i><span> 生活</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fa fa-music"></i><span> 音乐</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于我</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">Linux操作系统</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2024-10-18T11:52:12.000Z" title="发表于 2024-10-18 19:52:12">2024-10-18</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2024-10-19T05:02:45.638Z" title="更新于 2024-10-19 13:02:45">2024-10-19</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%BC%80%E5%8F%91%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86/">大数据开发前置知识</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">1.5k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>4分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="Linux操作系统"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h2 id="第一章"><a href="#第一章" class="headerlink" title="第一章"></a>第一章</h2><p>VMware是一个提供虚拟化环境的软件,可以将Ubuntu Linux安装在里面</p>
+<p><strong>Ubuntu系统中找不到ifconfig命令：</strong><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_36938617/article/details/95013583">Ubuntu系统中找不到ifconfig命令_找不到命令 “ifconfig”,但可以通过以下软件包安装它: sudo apt install n-CSDN博客</a></p>
+<p>输入ifconfig查看ip地址</p>
+<p>快照功能</p>
+<h2 id="第二章"><a href="#第二章" class="headerlink" title="第二章"></a>第二章</h2><h3 id="知识点概括"><a href="#知识点概括" class="headerlink" title="知识点概括"></a>知识点概括</h3><p>Linux没有盘符这个概念,只有一个根目录&#x2F;,所有文件都在它下面</p>
+<ul>
+<li><p>在<strong>Linux系统</strong>中，路径之间的层级关系，使用**:&#x2F;**来表示</p>
+</li>
+<li><p>在<strong>Windows系统</strong>中，路径之间的层级关系，使用**:\**来表示</p>
+</li>
+</ul>
+<blockquote>
+<p>无论是什么命令，用于什么用途，在Linux中，命令有其通用的格式:command [-options] [parameter]</p>
+</blockquote>
+<p> command：<strong>命令</strong>本身</p>
+<p> -options：[可选,非必填]命令的一些<strong>选项</strong>,可以通过选项控制命令的行为细节 </p>
+<p>parameter：[可选,非必填]命令的<strong>参数</strong>，多数用于命令的指向目标等</p>
+<p><strong>ctrl+l</strong>可以清空findshell的屏幕</p>
+<p>切换到root用户获得管理员权限 <code>su - root</code></p>
+<h3 id="相对路径和绝对路径"><a href="#相对路径和绝对路径" class="headerlink" title="相对路径和绝对路径"></a>相对路径和绝对路径</h3><p>绝对路径：以根目录为起点，描述路径的一种写法，路径描述以&#x2F;开头</p>
+<p>相对路径:以当前目录为起点，描述路径的一种写法，路径描述无需以&#x2F;开头</p>
+<h3 id="特殊路径符"><a href="#特殊路径符" class="headerlink" title="特殊路径符"></a>特殊路径符</h3><ul>
+<li><code>.</code>		  表示当前目录，比如cd .&#x2F;Desktop表示切换到当前目录下的Desktop目录内，和cd Desktop效果一致</li>
+<li><code>..</code>		表示上一级目录，比如: cd .. 即可切换到上一级目录，cd ..&#x2F;..切换到上二级的目录</li>
+<li><code>~</code>          表示HOME目录，比如: cd～即可切换到HOME目录 或 cd ~&#x2F;Desktop，切换到HOME内的Desktop目录</li>
+</ul>
+<h3 id="命令介绍"><a href="#命令介绍" class="headerlink" title="命令介绍"></a>命令介绍</h3><blockquote>
+<p>ls命令</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">语法：ls [-a -l -h] [Linux路径]		展示当前的工作目录，linux默认是home目录</span><br><span class="line">-a选项是指全部展示出来包括隐藏的文件</span><br><span class="line">-l选项是以列表的形式展现</span><br><span class="line">-h选项是展示文件的大小单位</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>cd命令</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">语法：cd [Linux路径]			改变当前工作目录为[Linux路径]	</span><br><span class="line">cd命令无需选项，只有参数，表示要切换到哪个目录下</span><br><span class="line">cd命令直接执行，不写参数，表示回到用户的HOME目录</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p> pwd命令</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">语法：pwd			输出当前的工作目录</span><br><span class="line">pwd命令，无选项，无参数，直接输入</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>mkdir命令</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">语法：mkdir [-p] Linux路径			创建新的目录（文件夹），路径是必填的</span><br><span class="line">-p选项是创建多个层级的目录</span><br><span class="line">注意：创建文件夹需要修改权限﹐请确保操作均在HOME目录内，不要在HOME外操作，会涉及到权限问题，HOME外无法成功</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>-touch-cat-more命令</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">touch命令</span><br><span class="line">语法：touch Linux路径			创建文件如test.txt</span><br><span class="line">cat命令</span><br><span class="line">语法：cat Linux路径			查看文件的内容</span><br><span class="line">more命令</span><br><span class="line">语法：more Linux路径			查看文件的内容</span><br><span class="line">与cat不同的是：</span><br><span class="line">1、cat是直接将内容全部显示出来</span><br><span class="line">2、more支持翻页，如果文件内容过多，可以一页页的展示(空格键翻页，q键直接退出来)</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>-cp-mv-rm命令</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">cp命令</span><br><span class="line">语法：cp [-r] 参数1 参数2			复制文件或文件夹</span><br><span class="line">-r选项，可选，用于复制文件夹使用，表示递归</span><br><span class="line">参数1, Linux路径, 表示被复制的文件或文件夹</span><br><span class="line">参数2，Linux路径, 表示要复制去的地方</span><br><span class="line">mv命令</span><br><span class="line">语法：mv 参数1 参数2			移动文件或文件夹</span><br><span class="line">rm命令</span><br><span class="line">语法：rm [-r -f] 参数1 参数2 ...... 参数N			删除文件或文件夹</span><br><span class="line">-r选项用于删除文件夹</span><br><span class="line">-f选项表示强制删除，不提示，对root管理员用户使用</span><br><span class="line">注意：rm命令支持通配符*，用来做模糊匹配，符号*表示通配符，即匹配任意内容(包含空)</span><br><span class="line">1、test*，表示匹配任何以test开头的内容</span><br><span class="line">2、*test,表示匹配任何以test结尾的内容</span><br><span class="line">3、*test*，表示匹配任何包含test的内容</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>-which-find命令</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">which命令</span><br><span class="line">语法：which 要查找的命令			如which cd</span><br><span class="line">find命令</span><br><span class="line">按文件名查找:</span><br><span class="line">语法：find 起始路径 -name &quot;被查找文件名&quot;			按文件名查找文件</span><br><span class="line">也适用模糊匹配的规则</span><br><span class="line">按文件大小查找:</span><br><span class="line">语法：find 起始路径 -size +|-n[kMG]</span><br><span class="line">+、-表示大于或小于</span><br><span class="line">n表示数字大小</span><br><span class="line">kMG表示大小单位，k(小写字母)表示kb，M表示MB，G表示GB</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>grep命令</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">语法：grep [-n] &quot;关键字&quot; 文件路径			从文件中通过关键字过滤文件行	</span><br><span class="line">-n选项用于显示匹配的行的行号</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>wc命令</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">语法：wc [-c -m -l -w] 文件路径			统计文件的行数、单词数量等</span><br><span class="line">-c，统计bytes数量</span><br><span class="line">-m，统计字符数量</span><br><span class="line">-l，统计行数</span><br><span class="line">-w，统计单词数量</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>echo命令</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">语法：echo 输出的内容			打印输出</span><br><span class="line">覆写是&gt;   ehco &quot;内容&quot; &gt; 文件</span><br><span class="line">追加是&gt;&gt;  echo &quot;内容&quot; &gt;&gt; 文件</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>tail命令</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">语法：tail [-f -num] Linux路径</span><br><span class="line">-f表示持续跟踪</span><br><span class="line">-num表示从后往前数多少行，默认是10，这里写具体数字比如说-5</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>常用vim快捷键</p>
+</blockquote>
+<p>yy			 复制当前行</p>
+<p>p			   粘贴内容</p>
+<p>dd 		    删除当前行</p>
+<p>u			   撤销修改</p>
+<p>ctrl+r	    反向撤销修改</p>
+<p>dG            从当前行开始，向下全部删除</p>
+<p>dgg           从当前行开始，向上全部删除</p>
+<p>&#x2F;    		    进入搜索模式（n向下继续搜索，N向上继续搜索）</p>
+<p>:set nu     显示行号</p>
+<h2 id="第三章"><a href="#第三章" class="headerlink" title="第三章"></a>第三章</h2><p>Ubuntu系统输入<code>su - root</code>弹认证失败：<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_45875853/article/details/136299744#">Linux输入“su”进入root时，提示“认证失败”的解决办法_su: 认证失败-CSDN博客</a></p>
+<p>用户、用户组相关命令操作</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="Pencil1024">Pencil</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="http://localhost:4000/posts/6f6343c5.html">http://localhost:4000/posts/6f6343c5.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://github.com/Pencil1024/Pencil1024.github.io.git" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://localhost:4000" target="_blank">Pencil</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/Linux/">Linux</a></div><div class="post_share"><div class="social-share" data-image="/img/up.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i>赞助</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/img/wechat.png" target="_blank"><img class="post-qr-code-img" src="/img/wechat.png" alt="微信"/></a><div class="post-qr-code-desc">微信</div></li></ul></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/posts/ce3dfaf1.html" title="移除桌面快捷左下箭头"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">移除桌面快捷左下箭头</div></div></a></div></nav><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="twikoo-wrap"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/up.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Pencil</div><div class="author-info__description">紧行无好步</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">18</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">11</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">11</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="https://blog.csdn.net/m0_73333789?spm=1000.2115.3001.5343" target="_blank" title="CSDN"><i class="fa fa-book-open"></i></a><a class="social-icon" href="tencent://AddContact/?fromId=45&amp;fromSubId=1&amp;subcmd=all&amp;uin=1606910074&amp;website=www.oicqzone.com" target="_blank" title="QQ"><i class="fab fa-qq"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">坚持互联网开源精神！</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E7%AB%A0"><span class="toc-number">1.</span> <span class="toc-text">第一章</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E7%AB%A0"><span class="toc-number">2.</span> <span class="toc-text">第二章</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%9F%A5%E8%AF%86%E7%82%B9%E6%A6%82%E6%8B%AC"><span class="toc-number">2.1.</span> <span class="toc-text">知识点概括</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%9B%B8%E5%AF%B9%E8%B7%AF%E5%BE%84%E5%92%8C%E7%BB%9D%E5%AF%B9%E8%B7%AF%E5%BE%84"><span class="toc-number">2.2.</span> <span class="toc-text">相对路径和绝对路径</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%89%B9%E6%AE%8A%E8%B7%AF%E5%BE%84%E7%AC%A6"><span class="toc-number">2.3.</span> <span class="toc-text">特殊路径符</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%91%BD%E4%BB%A4%E4%BB%8B%E7%BB%8D"><span class="toc-number">2.4.</span> <span class="toc-text">命令介绍</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E7%AB%A0"><span class="toc-number">3.</span> <span class="toc-text">第三章</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/6f6343c5.html" title="Linux操作系统">Linux操作系统</a><time datetime="2024-10-18T11:52:12.000Z" title="发表于 2024-10-18 19:52:12">2024-10-18</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/ce3dfaf1.html" title="移除桌面快捷左下箭头">移除桌面快捷左下箭头</a><time datetime="2024-09-15T00:59:17.000Z" title="发表于 2024-09-15 08:59:17">2024-09-15</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/cedaecd5.html" title="加减乘除高精度"><img src="https://pencil1024.oss-cn-chengdu.aliyuncs.com/imgs/202407290057158.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="加减乘除高精度"/></a><div class="content"><a class="title" href="/posts/cedaecd5.html" title="加减乘除高精度">加减乘除高精度</a><time datetime="2024-07-28T16:36:39.000Z" title="发表于 2024-07-29 00:36:39">2024-07-29</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/7aae9fe2.html" title="多元统计分析及R语言建模"><img src="https://pencil1024.oss-cn-chengdu.aliyuncs.com/imgs/202407161436058.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="多元统计分析及R语言建模"/></a><div class="content"><a class="title" href="/posts/7aae9fe2.html" title="多元统计分析及R语言建模">多元统计分析及R语言建模</a><time datetime="2024-07-16T05:50:01.000Z" title="发表于 2024-07-16 13:50:01">2024-07-16</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/2a87fde6.html" title="马原期末复习"><img src="https://pencil1024.oss-cn-chengdu.aliyuncs.com/imgs/202410182020414.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="马原期末复习"/></a><div class="content"><a class="title" href="/posts/2a87fde6.html" title="马原期末复习">马原期末复习</a><time datetime="2024-07-16T05:43:41.000Z" title="发表于 2024-07-16 13:43:41">2024-07-16</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2024 By Pencil</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="share" type="button" title="分享链接" onclick="share()"><i class="fas fa-share-nodes"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button class="quanping" id="toggleFullScreen" type="button" onclick="toggleFullScreen()"><i class="fas fa-expand"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button><button id="go-down" type="button" title="直达底部" onclick="btf.scrollToDest(document.body.scrollHeight, 500)"><i class="fas fa-arrow-down"></i></button></div></div><div><script src="/js/utils.js?v=4.12.0"></script><script src="/js/main.js?v=4.12.0"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.32/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"><script>(() => {
+  const init = () => {
+    twikoo.init(Object.assign({
+      el: '#twikoo-wrap',
+      envId: 'https://pencil1024.netlify.app/.netlify/functions/twikoo',
+      region: 'ap-chongqing',
+      onCommentLoaded: () => {
+        btf.loadLightbox(document.querySelectorAll('#twikoo .tk-content img:not(.tk-owo-emotion)'))
+      }
+    }, null))
+  }
+
+  const loadTwikoo = () => {
+    if (typeof twikoo === 'object') setTimeout(init,0)
+    else getScript('https://cdn.jsdelivr.net/npm/twikoo@1.6.29/dist/twikoo.all.min.js').then(init)
+  }
+
+  const getCount = () => {
+    const countELement = document.getElementById('twikoo-count')
+    if(!countELement) return
+    twikoo.getCommentsCount({
+      envId: 'https://pencil1024.netlify.app/.netlify/functions/twikoo',
+      region: 'ap-chongqing',
+      urls: [window.location.pathname],
+      includeReply: false
+    }).then(res => {
+      countELement.textContent = res[0].count
+    }).catch(err => {
+      console.error(err)
+    })
+  }
+
+  if ('Twikoo' === 'Twikoo' || !true) {
+    if (true) btf.loadComment(document.getElementById('twikoo-wrap'), loadTwikoo)
+    else {
+      loadTwikoo()
+      GLOBAL_CONFIG_SITE.isPost && getCount()
+    }
+  } else {
+    window.loadOtherComment = loadTwikoo
+  }
+})()</script></div><script src="https://cdn.jsdelivr.net/gh/nextapps-de/winbox/dist/winbox.bundle.min.js"></script><script src="https://cdn.bootcdn.net/ajax/libs/clipboard.js/2.0.11/clipboard.min.js"></script><script src="/js/huanimg.js?1"></script><script src="/js/rightsidebutton.js?1"></script><script src="/js/firework.js?1"></script><div class="aplayer no-destroy" data-id="5002521522" data-server="netease" data-type="playlist" data-fixed="true" data-mini="true" data-listFolded="false" data-order="random" data-preload="none" data-autoplay="true" muted></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/metingjs/dist/Meting.min.js"></script><script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.min.js"></script><script>let pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"]):not([href="/music/"]):not([href="/no-pjax/"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+
+  // removeEventListener
+  btf.removeGlobalFnEvent('pjax')
+  btf.removeGlobalFnEvent('themeChange')
+
+  document.getElementById('rightside').classList.remove('rightside-show')
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+
+  typeof disqusjs === 'object' && disqusjs.destroy()
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+})
+
+document.addEventListener('pjax:error', e => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div><div id="local-search-stats-wrap"></div></div></div><div id="search-mask"></div><script src="/js/search/local-search.js?v=4.12.0"></script></div></div></body></html>
