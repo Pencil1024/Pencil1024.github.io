@@ -1,0 +1,171 @@
+/* 字体加粗颜色 */
+strong, b{
+  font-weight: bold !important;  /* 使用 !important 来确保样式优先级 */
+  color: #304ffe !important;    /* 设置加粗文本的颜色为蓝色 */
+}
+
+/* ``荧光笔部分 */
+#article-container code {
+  background-color: rgb(255, 245, 173);
+  font-family: 微软雅黑;
+  color: rgb(71, 101, 130);
+}
+
+/* 全局字体样式 */
+#article-container p {
+  /* font-size: 16px; */
+  margin: 0 0 8px;
+  /* line-height: 1.5 !important; */
+  /* font-weight: 500 !important; */
+  /* text-align: left !important; */
+  letter-spacing: 0.5px !important;
+}
+
+/* 标题字大小行间距设置 */
+a {
+  color: #4183C4;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  position: relative;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  line-height: 1.4;
+  cursor: text;
+}
+h1:hover a.anchor,
+h2:hover a.anchor,
+h3:hover a.anchor,
+h4:hover a.anchor,
+h5:hover a.anchor,
+h6:hover a.anchor {
+  text-decoration: none;
+}
+h1 tt,
+h1 code {
+  font-size: inherit;
+}
+h2 tt,
+h2 code {
+  font-size: inherit;
+}
+h3 tt,
+h3 code {
+  font-size: inherit;
+}
+h4 tt,
+h4 code {
+  font-size: inherit;
+}
+h5 tt,
+h5 code {
+  font-size: inherit;
+}
+h6 tt,
+h6 code {
+  font-size: inherit;
+}
+h1 {
+  font-size: 2.25em;
+  line-height: 1.2;
+  /* border-bottom: 1px solid #eee; */
+}
+h2 {
+  font-size: 1.75em;
+  line-height: 1.225;
+  border-bottom: 1px solid #eee;
+}
+h3 {
+  font-size: 1.35em;
+  line-height: 1.43;
+}
+h4 {
+  font-size: 1.2em;
+}
+h5 {
+  font-size: 1em;
+}
+h6 {
+ font-size: 1em;
+  color: #777;
+}
+
+/* 代码块设置 */
+#article-container figure.highlight {
+  border-radius: 8px;
+}
+/* 代码块中左边的数字栏 */
+#article-container figure.highlight .gutter pre {
+  background-color: #303841;
+}
+/* 代码块中顶部那一行 */
+#article-container .highlight-tools {
+  background-color: #303841;
+  font-size: .7rem;
+}
+/* 代码块中内容体部分 */
+#article-container pre, #article-container figure.highlight {
+  background-color: #303841;
+}
+
+/* 文章页背景 */
+div#post {
+  border: 2px solid rgba(0, 255, 255, .6);
+  font-size: 14.5px;
+  background: rgba(255, 255, 255, .67) !important;
+  animation: slide-in .5s .1s backwards;
+  -webkit-animation: slide-in .5s .1s backwards;
+}
+/* 文章页里面的最下面的板块（文章作者、文章链接、版权声明）*/
+#post .post-copyright  {
+  border: 1px solid #000000;
+}
+
+/* 全局背景图 */
+body {
+  background: url('/img/bg.png') no-repeat center center fixed;
+  background-size: cover;
+}
+/* 首页的每个文章（一边是图片，一边是题目和描述） 描述部分的背景颜色*/
+.recent-post-item {
+  background: rgba(255, 255, 255, .67) !important;
+  border-radius: 16px !important;
+}
+
+/* 左边人物栏，背景图 */
+.card-info {
+  background: url('/img/avter_bg.png')  !important;
+}
+/* 人物栏，字体样式设置 */
+.author-info__name, .author-info__description, .headline, .length-num{
+  color: white !important;
+}
+/* 公告栏 */
+.card-announcement {
+  background: rgba(255, 255, 255, .67) !important;
+}
+/* 最新文章 */
+.card-recent-post {
+  background: rgba(255, 255, 255, .67) !important;
+}
+/* 标签 */
+.card-tags {
+  background: rgba(255, 255, 255, .67) !important;
+}
+/* 归档 */
+.card-archives {
+  background: rgba(255, 255, 255, .67) !important;
+}
+/* 网站咨询 */
+.card-webinfo {
+  background: rgba(255, 255, 255, .67) !important;
+}
+/* 文章页里面的目录 */
+#card-toc {
+  background: rgba(255, 255, 255, .67) !important;
+}
