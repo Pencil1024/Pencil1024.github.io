@@ -78,7 +78,7 @@ h1 {
 h2 {
   font-size: 1.75em;
   line-height: 1.225;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid #dacdcd;
 }
 h3 {
   font-size: 1.35em;
@@ -117,7 +117,7 @@ h6 {
 div#post {
   border: 2px solid rgba(0, 255, 255, .6);
   font-size: 14.5px;
-  background: rgba(255, 255, 255, .67) !important;
+  background: rgba(255, 255, 255, .85) !important;
   animation: slide-in .5s .1s backwards;
   -webkit-animation: slide-in .5s .1s backwards;
 }
@@ -168,4 +168,10 @@ body {
 /* 文章页里面的目录 */
 #card-toc {
   background: rgba(255, 255, 255, .67) !important;
+}
+
+
+/* 底部 */
+#footer {
+  background-color: rgb(255, 255, 255,0) !important;
 }
