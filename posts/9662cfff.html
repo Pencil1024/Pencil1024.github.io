@@ -1,13 +1,13 @@
-<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>数仓开发学习笔记 | Pencil</title><meta name="author" content="Pencil"><meta name="copyright" content="Pencil"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="day1   数仓开发ODS层（接入层&#x2F;贴源层）ods层用来对接数据源，同步用的 全量（full）——状态 增量（inc）——行为  业务分两大类：全量表和增量表  日志文件  业务表  全量表： DataX， 表结构与业务表保持一致 mysql ： column[id, name, age] data： 1001    zhangsan     30 hive： column[id,">
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>数仓开发学习笔记 | Pencil</title><meta name="author" content="Pencil"><meta name="copyright" content="Pencil"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="数仓开发ODS层（接入层&#x2F;贴源层）ods层用来对接数据源，同步用的 全量（full）——状态 增量（inc）——行为  业务分两大类：全量表和增量表  日志文件  业务表  全量表： DataX， 表结构与业务表保持一致 mysql ： column[id, name, age] data： 1001    zhangsan     30 hive： column[id, name, a">
 <meta property="og:type" content="article">
 <meta property="og:title" content="数仓开发学习笔记">
 <meta property="og:url" content="http://localhost:4000/posts/9662cfff.html">
 <meta property="og:site_name" content="Pencil">
-<meta property="og:description" content="day1   数仓开发ODS层（接入层&#x2F;贴源层）ods层用来对接数据源，同步用的 全量（full）——状态 增量（inc）——行为  业务分两大类：全量表和增量表  日志文件  业务表  全量表： DataX， 表结构与业务表保持一致 mysql ： column[id, name, age] data： 1001    zhangsan     30 hive： column[id,">
+<meta property="og:description" content="数仓开发ODS层（接入层&#x2F;贴源层）ods层用来对接数据源，同步用的 全量（full）——状态 增量（inc）——行为  业务分两大类：全量表和增量表  日志文件  业务表  全量表： DataX， 表结构与业务表保持一致 mysql ： column[id, name, age] data： 1001    zhangsan     30 hive： column[id, name, a">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://localhost:4000/img/up.jpg">
 <meta property="article:published_time" content="2025-03-08T12:35:42.000Z">
-<meta property="article:modified_time" content="2025-03-08T12:37:29.762Z">
+<meta property="article:modified_time" content="2025-03-09T12:58:00.814Z">
 <meta property="article:author" content="Pencil">
 <meta property="article:tag" content="数据仓库">
 <meta name="twitter:card" content="summary">
@@ -56,7 +56,7 @@
   isHome: false,
   isHighlightShrink: false,
   isToc: true,
-  postUpdate: '2025-03-08 20:37:29'
+  postUpdate: '2025-03-09 20:58:00'
 }</script><script>(win=>{
       win.saveToLocal = {
         set: (key, value, ttl) => {
@@ -153,10 +153,7 @@
         }
       }
       detectApple()
-    })(window)</script><link rel="stylesheet" href="/css/huanimg.css?1"><link rel="stylesheet" href="/css/navigatorbar.css?1"><link rel="stylesheet" href="/css/music.css?1"><link rel="stylesheet" href="/css/ziti.css?1"><meta name="generator" content="Hexo 7.0.0"></head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/up.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">26</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">17</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">12</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-desktop"></i><span> 文章</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/categories/"><i class="fa-fw fa fa-archive"></i><span> 分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/archives/"><i class="fa-fw fa fa-folder-open"></i><span> 归档</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-paw"></i><span> 空间</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/life/"><i class="fa-fw fa fa-bicycle"></i><span> 说说</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-splotch"></i><span> 生活</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fa fa-music"></i><span> 音乐</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于我</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><span id="blog-info"><a href="/" title="Pencil"><span class="site-name">Pencil</span></a></span><div id="menus"><div style="display: inline-block;"><a class="site-page social-icon search" href="javascript:;" onclick="toggleWinbox()" title="切换背景-换一种感觉。"><i class="fas fa-image fa-fw"></i></a></div><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-desktop"></i><span> 文章</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/categories/"><i class="fa-fw fa fa-archive"></i><span> 分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/archives/"><i class="fa-fw fa fa-folder-open"></i><span> 归档</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-paw"></i><span> 空间</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/life/"><i class="fa-fw fa fa-bicycle"></i><span> 说说</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-splotch"></i><span> 生活</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fa fa-music"></i><span> 音乐</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于我</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">数仓开发学习笔记</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2025-03-08T12:35:42.000Z" title="发表于 2025-03-08 20:35:42">2025-03-08</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2025-03-08T12:37:29.762Z" title="更新于 2025-03-08 20:37:29">2025-03-08</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">2.6k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>9分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="数仓开发学习笔记"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><blockquote>
-<p>day1 </p>
-</blockquote>
-<h2 id="数仓开发"><a href="#数仓开发" class="headerlink" title="数仓开发"></a>数仓开发</h2><h3 id="ODS层（接入层-贴源层）"><a href="#ODS层（接入层-贴源层）" class="headerlink" title="ODS层（接入层&#x2F;贴源层）"></a>ODS层（接入层&#x2F;贴源层）</h3><p>ods层用来对接数据源，同步用的</p>
+    })(window)</script><link rel="stylesheet" href="/css/huanimg.css?1"><link rel="stylesheet" href="/css/navigatorbar.css?1"><link rel="stylesheet" href="/css/music.css?1"><link rel="stylesheet" href="/css/ziti.css?1"><meta name="generator" content="Hexo 7.0.0"></head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/up.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">26</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">17</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">12</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-desktop"></i><span> 文章</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/categories/"><i class="fa-fw fa fa-archive"></i><span> 分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/archives/"><i class="fa-fw fa fa-folder-open"></i><span> 归档</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-paw"></i><span> 空间</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/life/"><i class="fa-fw fa fa-bicycle"></i><span> 说说</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-splotch"></i><span> 生活</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fa fa-music"></i><span> 音乐</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于我</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><span id="blog-info"><a href="/" title="Pencil"><span class="site-name">Pencil</span></a></span><div id="menus"><div style="display: inline-block;"><a class="site-page social-icon search" href="javascript:;" onclick="toggleWinbox()" title="切换背景-换一种感觉。"><i class="fas fa-image fa-fw"></i></a></div><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-desktop"></i><span> 文章</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/categories/"><i class="fa-fw fa fa-archive"></i><span> 分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/archives/"><i class="fa-fw fa fa-folder-open"></i><span> 归档</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-paw"></i><span> 空间</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/life/"><i class="fa-fw fa fa-bicycle"></i><span> 说说</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-splotch"></i><span> 生活</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fa fa-music"></i><span> 音乐</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于我</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">数仓开发学习笔记</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2025-03-08T12:35:42.000Z" title="发表于 2025-03-08 20:35:42">2025-03-08</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2025-03-09T12:58:00.814Z" title="更新于 2025-03-09 20:58:00">2025-03-09</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">2.6k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>9分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="数仓开发学习笔记"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h2 id="数仓开发"><a href="#数仓开发" class="headerlink" title="数仓开发"></a>数仓开发</h2><h3 id="ODS层（接入层-贴源层）"><a href="#ODS层（接入层-贴源层）" class="headerlink" title="ODS层（接入层&#x2F;贴源层）"></a>ODS层（接入层&#x2F;贴源层）</h3><p>ods层用来对接数据源，同步用的</p>
 <p>全量（full）——状态</p>
 <p>增量（inc）——行为</p>
 <ul>
@@ -182,9 +179,6 @@
 </ul>
 </li>
 </ul>
-<blockquote>
-<p>day2</p>
-</blockquote>
 <h3 id="DIM层"><a href="#DIM层" class="headerlink" title="DIM层"></a>DIM层</h3><p>维度层保存维度表，所以建模理论应该遵循维度建模理论</p>
 <p>维度层中的维度表，主要用于统计分析</p>
 <ol>
@@ -217,9 +211,6 @@
 <p>shift+alt+鼠标左键可以多光标选中， shift + ctrl + alt可以矩形选中</p>
 <p>行为是用来做统计的，状态是用来做分析的</p>
 <p>实际生产环境中是用脚本来增加数据，没有事务的概念，所以不能回滚</p>
-<blockquote>
-<p>day3</p>
-</blockquote>
 <p>拉链表的数据源是ods增量表</p>
 <ul>
 <li>增量表<ul>
@@ -281,9 +272,6 @@
 <li>from_unixtime(ts, ‘yyyy-MM-dd HH:mm:ss’)</li>
 <li>date_format(from_utc_timestamp(ts*1000, ‘GMT+8’), ‘yyyy-MM-dd HH:mm:ss’)</li>
 </ul>
-<blockquote>
-<p>day4</p>
-</blockquote>
 <h3 id="ADS层"><a href="#ADS层" class="headerlink" title="ADS层"></a>ADS层</h3><p>统计粒度：分析数据的具体角度，称之为统计粒度（站在哪一个角度统计数据）</p>
 <p>指标：客户想要的一个结果数值</p>
 <p>分组聚合的场合下，那些字段可以出现在select子句中</p>
@@ -324,9 +312,6 @@
 
 <p>sql里面的字符串下标索引是从1开始的，而不是从0</p>
 <p>trim()函数去除空格</p>
-<blockquote>
-<p>day5</p>
-</blockquote>
 <h3 id="力扣SQL高频50"><a href="#力扣SQL高频50" class="headerlink" title="力扣SQL高频50"></a>力扣SQL高频50</h3><ul>
 <li><p>判断null写 <strong>is null</strong>，而不是写 <strong>&#x3D;null</strong></p>
 </li>
@@ -359,9 +344,6 @@
 <li><p>有 order by 时，distinct 先去重，再排序</p>
 </li>
 </ul>
-<blockquote>
-<p>day6</p>
-</blockquote>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="built_in">Max</span>(num) <span class="keyword">as</span> num </span><br><span class="line"><span class="keyword">from</span> MyNumbers</span><br><span class="line"><span class="keyword">group</span> <span class="keyword">by</span> num </span><br><span class="line"><span class="keyword">having</span> <span class="built_in">count</span>(num)<span class="operator">=</span><span class="number">1</span>;</span><br><span class="line"></span><br><span class="line">上面的<span class="keyword">sql</span>会有多条数据，因为对分组后的num来说,<span class="built_in">max</span>(num)作用的就是本身</span><br><span class="line"><span class="comment">----------------------------</span></span><br><span class="line">下面的<span class="keyword">sql</span>只会有一条数据，因为是对子查询的整个数据集来返回<span class="built_in">max</span>(num)</span><br><span class="line"></span><br><span class="line"><span class="keyword">select</span> <span class="built_in">max</span>(num) <span class="keyword">as</span> num </span><br><span class="line"><span class="keyword">from</span> (</span><br><span class="line">    <span class="keyword">select</span> num</span><br><span class="line">    <span class="keyword">from</span> MyNumbers</span><br><span class="line">    <span class="keyword">group</span> <span class="keyword">by</span> num</span><br><span class="line">    <span class="keyword">having</span> <span class="built_in">count</span>(num)<span class="operator">=</span><span class="number">1</span></span><br><span class="line">) t;</span><br></pre></td></tr></table></figure>
 
 <p>四舍五入函数用round</p>
@@ -404,9 +386,6 @@
 <p>union会自动去重</p>
 <p>在mysql中substr对字符串索引的下标从1开始</p>
 <p>date_sub(date, INTERVAL value unit) 从date日期中减去时间</p>
-<blockquote>
-<p>day7</p>
-</blockquote>
 <p>union all的效率比union更好，因为union有去重的功能（可能底层用缓存来实现去重的逻辑）</p>
 <p>date()函数，返回提取日期时间值的日期部分（去掉时间部分）</p>
 <h4 id="sql经典题"><a href="#sql经典题" class="headerlink" title="sql经典题"></a>sql经典题</h4><ol>
